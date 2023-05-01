@@ -18,15 +18,20 @@
         <nav>
             <div class="container">
 
-                <ul class="menu">
+                <ul class="menu" id="menu">
                     <li class="menu_item"><a class="menu_link" href="#">Главная</a></li>
-                    <li class="menu_item"><a class="menu_link" href="#">Со своим автомобилем</a></li>
-                    <li class="menu_item"><a class="menu_link" href="#">На автомобиле компании</a></li>
+                    <li class="menu_item"><a class="menu_link" href="#conditions">Со своим автомобилем</a></li>
+                    <li class="menu_item"><a class="menu_link" href="#conditions">На автомобиле компании</a></li>
                     <li class="menu_item"><a class="menu_link" href="#">Требования</a></li>
                     <li class="menu_item"><a class="menu_link" href="#">Контакты</a></li>
                     <li class="menu_item"><a class="menu_link" href="#">Оставить заявку</a></li>
                 </ul>
 
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
 
@@ -34,17 +39,18 @@
             <div class="container">
                 <div class="row">
  
-                    <div class="col-md-4 offset-md-1">
-                        <a class="subheader_logo-link" href="#"><img src="img/logo/Uber.svg" alt=logo"></a>
+                    <div class="col-6 offset-0 col-sm-5 offset-sm-1 col-md-4 offset-md-1 col-xl-4 offset-xl-1">
+                        <a class="subheader_logo_link" href="#"><img src="img/logo/Uber.svg" alt=logo"></a>
                         <div class="subheader_official">Официальный партнер Uber в Москве</div>
                     </div>
 
-                    <div class="col-md-2 offset-md-2">
+                    <div class="sm-xs_hiden col-1 offset-0 col-sm-1 offset-sm-0 col-md-3 offset-md-0 col-xl-2 offset-xl-2">
                         <div class="subheader_call">Звоните нам ежедневно</div>
                         <a class="subheader_phone" href="#">8 495 797 09 88</a>
                     </div>
 
-                    <div class="col-md-2 offset-md-0">
+                    <div class="col-5 offset-1 col-sm-4 offset-sm-0 col-md-2 offset-md-0 col-xl-2 offset-xl-0">
+                        <a class="subheader_phone sm-xs_visible" href="#">8 495 797 09 88</a>
                         <button class="subheader_btn">
                             заказать звонок
                         </button>
@@ -270,7 +276,7 @@
 
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="mobil_item mobil_item_1">
                         <div class="mobil_item_title">
                             оформление заказа одним касанием
@@ -279,7 +285,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="mobil_item mobil_item_2">
                         <div class="mobil_item_title">
                             надежная подача
@@ -288,7 +294,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="mobil_item mobil_item_3">
                         <div class="mobil_item_title">
                             прозрачные цены
@@ -297,7 +303,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="mobil_item mobil_item_4">
                         <div class="mobil_item_title">
                             безналичная оплата
@@ -306,7 +312,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="mobil_item mobil_item_5">
                         <div class="mobil_item_title">
                             обратная связь
@@ -315,7 +321,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="mobil_item mobil_item_6">
                         <div class="mobil_item_title">
                             разделить стоимость поездки
@@ -354,7 +360,7 @@
 
     </section>
 
-    <section class="conditions">
+    <section class="conditions" id="conditions">
         <div class="container">
 
             <div class="lable">
@@ -591,5 +597,6 @@
         </div>
 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

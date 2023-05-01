@@ -2,13 +2,17 @@
   font-family: "Roboto", sans-serif;
 }
 
-nav {
-  min-height: 50px;
-  background: #212121;
-}
-
 header {
   position: relative;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background: #212121;
+  z-index: 5;
 }
 
 .menu {
@@ -35,12 +39,14 @@ header {
 
 .subheader {
   position: absolute;
+  top: 0px;
+  z-index: 4;
   width: 100%;
-  min-height: 87px;
+  height: 87px;
   background: rgba(0, 0, 0, 0.6);
   mix-blend-mode: normal;
 }
-.subheader_logo-link {
+.subheader_logo_link {
   display: block;
   margin-top: 17px;
 }
@@ -82,9 +88,14 @@ header {
   box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   margin-top: 20px;
+  transition: 0.2s all;
+}
+.subheader_btn:hover {
+  opacity: 0.8;
 }
 
 .promote {
+  margin-top: 50px;
   background-image: url("../img/bg/uber_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -131,6 +142,10 @@ header {
   border-radius: 4px;
   margin: 0 auto;
   margin-top: 115px;
+  transition: 0.2s all;
+}
+.promote_btn:hover {
+  opacity: 0.8;
 }
 
 .cause {
@@ -312,7 +327,8 @@ header {
 .choice {
   position: relative;
   background: #070716;
-  padding: 57px 0 137px 0;
+  min-height: 896px;
+  padding: 55px 0 135px 0;
   z-index: 0;
 }
 .choice_car_img {
@@ -338,13 +354,13 @@ header {
 
 .conditions {
   min-height: 917px;
-  margin: 66px 0 87px 0;
+  padding: 66px 0 87px 0;
 }
 .conditions_title {
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
-  color: #1CA8C3;
+  color: #1EACC7;
 }
 .conditions_block {
   margin: 31px 0;
@@ -432,6 +448,10 @@ header {
 .footer_wrapper > div {
   width: 33%;
 }
+.footer_wrapper > div:nth-child(1) {
+  display: flex;
+  justify-content: start;
+}
 .footer_wrapper > div:nth-child(2) {
   display: flex;
   justify-content: center;
@@ -496,4 +516,257 @@ header {
   display: flex;
   justify-content: space-between;
   width: 295px;
+}
+
+.sm-xs_visible {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .menu_item {
+    padding-right: 15px;
+  }
+  .promote_title {
+    font-size: 54px;
+  }
+  .promote_subtitle {
+    font-size: 32px;
+  }
+  .mobil_item {
+    width: 300px;
+  }
+}
+@media (max-width: 991px) {
+  .menu_item {
+    padding-right: 5px;
+  }
+  .menu_link {
+    font-size: 12px;
+  }
+  .subheader_logo_link img {
+    width: 100%;
+  }
+  .subheader_official {
+    font-size: 11px;
+  }
+  .subheader_phone {
+    font-size: 21px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .promote_title {
+    font-size: 40px;
+  }
+  .promote_subtitle {
+    font-size: 23px;
+  }
+  .cause_information_block {
+    flex-direction: column;
+  }
+  .cause_information_block_wrapper {
+    margin-top: 10px;
+  }
+  .mobil_item {
+    width: 220px;
+  }
+  .choice_car_img {
+    width: 100%;
+  }
+  .choice_text {
+    color: white;
+  }
+  .footer_wrapper {
+    flex-direction: column;
+  }
+  .footer_wrapper > div {
+    width: 100%;
+  }
+  .footer_wrapper > div:nth-child(1) {
+    margin-top: 20px;
+    order: 2;
+    justify-content: center;
+  }
+  .footer_wrapper > div:nth-child(2) {
+    order: 1;
+  }
+  .footer_wrapper > div:nth-child(3) {
+    margin-top: 20px;
+    order: 3;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .sm-xs_hiden {
+    display: none;
+  }
+  .sm-xs_visible {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+  }
+  .menu {
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    padding-left: 42px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s all;
+  }
+  .menu li {
+    border: none;
+  }
+  .menu li a {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+  }
+  .menu_active {
+    left: 0;
+  }
+  .hamburger {
+    position: absolute;
+    right: 10px;
+    width: 26px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hamburger span {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 2px;
+    transition: 0.5s all;
+  }
+  .hamburger_active span:first-child {
+    margin-bottom: -2px;
+    transform: translateY(3px) rotate(-45deg);
+  }
+  .hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  .hamburger_active span:nth-child(3) {
+    transform: translateY(3px) rotate(45deg);
+  }
+  .subheader {
+    height: 80px;
+  }
+  .subheader_logo_link {
+    margin-top: 25px;
+  }
+  .subheader_official {
+    display: none;
+  }
+  .subheader_btn {
+    margin-top: 0;
+    height: 35px;
+  }
+  .subheader_phone {
+    margin-top: 7px;
+  }
+  .mobil_item {
+    width: 250px;
+  }
+}
+@media (max-width: 575px) {
+  .subheader {
+    height: 60px;
+  }
+  .subheader_logo_link {
+    margin-top: 15px;
+  }
+  .subheader_btn {
+    width: 110px;
+    height: 22px;
+    font-size: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3px;
+  }
+  .subheader_phone {
+    font-size: 13px;
+    margin-top: 7px;
+  }
+  .promote {
+    min-height: 400px;
+    padding: 90px 0 35px 0;
+  }
+  .promote_description {
+    display: none;
+  }
+  .promote_title {
+    line-height: 44px;
+    font-size: 36px;
+  }
+  .promote_subtitle {
+    font-size: 22px;
+  }
+  .promote_btn {
+    margin-top: 77px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .cause {
+    padding-bottom: 40px;
+  }
+  .cause .cause_information_block_wrapper {
+    width: 300px;
+  }
+  .mobil {
+    padding: 25px 0 40px 0;
+  }
+  .mobil_item_title {
+    font-size: 18px;
+  }
+  .choice {
+    padding: 25px 0 30px 0;
+    min-height: 390px;
+  }
+  .choice .title {
+    display: none;
+  }
+  .choice .subtitle {
+    display: none;
+  }
+  .choice_background_img {
+    display: none;
+  }
+  .conditions {
+    padding: 25px 0 30px 0;
+  }
+  .world {
+    padding: 25px 0 30px 0;
+    min-height: 360px;
+  }
+  .footer {
+    padding: 25px 0 30px 0;
+  }
+  .footer_line {
+    margin-top: 25px;
+    width: 251px;
+  }
+  .footer_social_block {
+    margin-top: 20px;
+  }
+  .footer_applications_block {
+    margin-top: 20px;
+  }
+  .footer_links_block_center {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer_links_block_center a {
+    font-size: 15px;
+  }
+  .footer_links_block a {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
